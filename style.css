@@ -1,0 +1,62 @@
+body{
+    margin:0;
+    padding:0;
+    background: linear-gradient(#ff9a9e,#fad0c4);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    text-align:center;
+    color:white;
+}
+
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+.texto{
+    margin-top:120px;
+}
+
+#sobre{
+    position:relative;
+    width:250px;
+    height:180px;
+    margin:80px auto;
+    background:#ff6b81;
+    cursor:pointer;
+}
+
+.tapa{
+    position:absolute;
+    width:0;
+    height:0;
+    border-left:125px solid transparent;
+    border-right:125px solid transparent;
+    border-bottom:90px solid #ff4757;
+    top:-90px;
+    transition:0.8s;
+}
+
+.carta{
+    position:absolute;
+    background:white;
+    color:black;
+    width:220px;
+    height:140px;
+    left:15px;
+    top:20px;
+    padding:10px;
+    box-sizing:border-box;
+    transform:translateY(40px);
+    transition:0.8s;
+}
+
+#sobre.abierto .tapa{
+    transform:rotateX(180deg);
+}
+
+#sobre.abierto .carta{
+    transform:translateY(-80px);
+}
